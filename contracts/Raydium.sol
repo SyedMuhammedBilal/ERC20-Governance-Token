@@ -3,8 +3,9 @@ pragma solidity ^0.8.2;
 
 import "../@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "../@openzeppelin/contracts/access/Ownable.sol";
+import "./interface/IRaydium";
 
-contract Raydium is ERC20, Ownable {
+contract Raydium is ERC20, Ownable, IRaydium {
 
     mapping(address => bool) private isMinter;
     mapping(address => bool) private isBurner;
